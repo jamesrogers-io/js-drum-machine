@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>drumMachine.js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Title Area -->
+      <div class="row">
+        <div id="title-area" class="col s12">
+          <h1 class="center-align">Javascript Drum Machine</h1>
+          <p class="center-align">Use the Number Keys on the right side of your keyboard to
+            control the Drum Machine</p>
+        </div>
+      </div>
+
+      <!-- Drum Machine: Row 1 -->
+      <div class="row" id="row1">
+        <!-- Pad 7 -->
+        <div class="col s1 offset-s4 z-depth-1 key" data-key="103">
+          <h2 class="center-align">7</h2>
+        </div>
+        <!-- Pad 8 -->
+        <div class="col s1 z-depth-1 key" data-key="104">
+          <h2 class="center-align">8</h2>
+        </div>
+        <!-- Pad 9 -->
+        <div class="col s1 z-depth-1 key" data-key="105">
+          <h2 class="center-align">9</h2>
+        </div>
+      </div><!-- /row -->
+
+      <!-- Drum Machine: Row 2 -->
+      <div class="row" id="row2">
+        <!-- Pad 4 -->
+        <div class="col s1 offset-s4 z-depth-1 key" data-key="100">
+            <h2 class="center-align">4</h2>
+        </div>
+        <!-- Pad 5 -->
+        <div class="col s1 z-depth-1 key" data-key="101">
+          <h2 class="center-align">5</h2>
+        </div>
+        <!-- Pad 6 -->
+        <div class="col s1 z-depth-1 key" data-key="102">
+          <h2 class="center-align">6</h2>
+        </div>
+      </div><!-- /row -->
+
+      <!-- Drum Machine: Row 3 -->
+      <div class="row" id="row2">
+        <!-- Pad 1 -->
+        <div class="col s1 offset-s4 z-depth-1 key" data-key="97">
+            <h2 class="center-align">1</h2>
+        </div>
+        <!-- Pad 2 -->
+        <div class="col s1 z-depth-1 key" data-key="98">
+          <h2 class="center-align">2</h2>
+        </div>
+        <!-- Pad 3 -->
+        <div class="col s1 z-depth-1 key" data-key="99">
+          <h2 class="center-align">3</h2>
+        </div>
+      </div><!-- /row -->
+
+      <!-- Drum Machine Sound Bank -->
+      <audio data-key="103" src="./sounds/hihat.wav"></audio>
+      <audio data-key="104" src="./sounds/openHat.wav"></audio>
+      <audio data-key="105" src="./sounds/tink.wav"></audio>
+      <audio data-key="100" src="./sounds/tom.wav"></audio>
+      <audio data-key="101" src="./sounds/clap.wav"></audio>
+      <audio data-key="102" src="./sounds/snare.wav"></audio>
+      <audio data-key="97" src="./sounds/kick.wav"></audio>
+      <audio data-key="98" src="./sounds/boom.wav"></audio>
+      <audio data-key="99" src="./sounds/ride.wav"></audio>
+
+
+
+    </div> <!-- /container -->
+
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  </body>
+</html>
