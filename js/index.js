@@ -38,8 +38,6 @@ const padSeven = document.getElementById('pad-seven');
 const padEight = document.getElementById('pad-eight');
 const padNine = document.getElementById('pad-nine');
 
-// INDIVIDUAL SOUNDS
-
 
 
 // PAD 1: CLICK FUNCTION
