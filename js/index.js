@@ -1,21 +1,32 @@
 window.addEventListener('keydown', function(event) { // This will watch for Key Strokes
   const myAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`); // the [] is an *Attribute Selector*
   const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+  const greenLight = document.getElementById('green-light');
+  const redLight = document.getElementById('red-light');
+
   if(!myAudio) return; // stop the function if no audio file attached to that key
 
   myAudio.currentTime = 0; // audio plays from the beginning each time the function runs
   myAudio.play(); // play the src audio file found in 'const myAudio'
   key.classList.remove('z-depth-1'); // add a class to whatever HTML element has a matching keyCode
+  greenLight.classList.add('green');
+  redLight.innerHTML = `${key.id}`;
   console.log(event);
 });
 
 // Removes "playing" class when key up occurs
 window.addEventListener('keyup', function(event) {
   const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+  const greenLight = document.getElementById('green-light');
+  const redLight = document.getElementById('red-light');
+
   key.classList.add('z-depth-1');
+  greenLight.classList.remove('green');
+  redLight.innerHTML = '';
+
 });
 
-// main
+
 
 
 /* The Above Function Explained:
