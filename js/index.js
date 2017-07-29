@@ -5,15 +5,15 @@ window.addEventListener('keydown', function(event) { // This will watch for Key 
 
   myAudio.currentTime = 0; // audio plays from the beginning each time the function runs
   myAudio.play(); // play the src audio file found in 'const myAudio'
-  key.classList.add('z-depth-5'); // add a class to whatever HTML element has a matching keyCode
+  key.classList.remove('z-depth-1'); // add a class to whatever HTML element has a matching keyCode
+  console.log(event);
 });
 
 // Removes "playing" class when key up occurs
 window.addEventListener('keyup', function(event) {
-  const key = document.querySelector(`.key[data-key="${event.keyCode}"]`)
-  key.classList.remove('z-depth-5');
+  const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+  key.classList.add('z-depth-1');
 });
-
 
 
 /* The Above Function Explained:

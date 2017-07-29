@@ -1,10 +1,12 @@
 .key {
   border: 2px solid black;
   color: black;
-  transition: 0.07s;
+  transition: .07s;
+  maring: 10px;
 }
 
 .playingKey {
-  transition: scale(2.1);
-  color: red;
+  transition: scale(0.5);
+  color: #fff;
+  background-color: #0a0a0a !important;
 }
