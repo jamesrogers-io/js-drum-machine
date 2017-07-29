@@ -8,8 +8,8 @@ window.addEventListener('keydown', function(event) { // This will watch for Key 
 
   myAudio.currentTime = 0; // audio plays from the beginning each time the function runs
   myAudio.play(); // play the src audio file found in 'const myAudio'
-  key.classList.remove('z-depth-1'); // add a class to whatever HTML element has a matching keyCode
-  greenLight.classList.add('green');
+  key.classList.remove('z-depth-4'); // add a class to whatever HTML element has a matching keyCode
+  greenLight.classList.add('indicatorLight');
   redLight.innerHTML = `${key.title}`;
   console.log(event);
 });
@@ -20,31 +20,28 @@ window.addEventListener('keyup', function(event) {
   const greenLight = document.getElementById('green-light');
   const redLight = document.getElementById('red-light');
 
-  key.classList.add('z-depth-1');
-  greenLight.classList.remove('green');
+  key.classList.add('z-depth-4');
+  greenLight.classList.remove('indicatorLight');
   redLight.innerHTML = '';
 
 });
 
-
-
-
 // CLICK FUNCTION
 const playPad = function(x) {
-  const pad = document.getElementById(x);
+  const pad = document.getElementById(`${x}`);
   const mySample = document.querySelector(`audio[id="${x}"]`);
   const greenLight = document.getElementById('green-light');
   const redLight = document.getElementById('red-light');
 
-  greenLight.classList.add('green');
-  pad.classList.remove('z-depth-1');
+  pad.classList.add('z-depth-4');
+  greenLight.classList.add('indicatorLight');
   redLight.innerText = `${mySample.title}`;
   mySample.currentTime = 0;
   mySample.play();
 
   setTimeout(function() {
-    greenLight.classList.remove('green');
-    pad.classList.add('z-depth-1');
+    greenLight.classList.remove('indicatorLight');
+    pad.classList.add('playingKey');
     redLight.innerHTML = '';
 
   }, 100);
