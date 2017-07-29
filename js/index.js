@@ -10,7 +10,7 @@ window.addEventListener('keydown', function(event) { // This will watch for Key 
   myAudio.play(); // play the src audio file found in 'const myAudio'
   key.classList.remove('z-depth-1'); // add a class to whatever HTML element has a matching keyCode
   greenLight.classList.add('green');
-  redLight.innerHTML = `${key.id}`;
+  redLight.innerHTML = `${key.title}`;
   console.log(event);
 });
 
@@ -25,6 +25,144 @@ window.addEventListener('keyup', function(event) {
   redLight.innerHTML = '';
 
 });
+
+
+// INDIVIDUAL PADS
+const padOne = document.getElementById('pad-one');
+const padTwo = document.getElementById('pad-two');
+const padThree = document.getElementById('pad-three');
+const padFour = document.getElementById('pad-foud');
+const padFive = document.getElementById('pad-five');
+const padSix = document.getElementById('pad-six');
+const padSeven = document.getElementById('pad-seven');
+const padEight = document.getElementById('pad-eight');
+const padNine = document.getElementById('pad-nine');
+
+// INDIVIDUAL SOUNDS
+
+
+
+// PAD 1: CLICK FUNCTION
+const playPadOne = function() {
+  const wavOne = document.querySelector('audio[data-key="103"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavOne.currentTime = 0;
+  wavOne.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 2: CLICK FUNCTION
+const playPadTwo = function() {
+  const wavTwo = document.querySelector('audio[data-key="104"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavTwo.currentTime = 0;
+  wavTwo.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 3: CLICK FUNCTION
+const playPadThree = function() {
+  const wavThree = document.querySelector('audio[data-key="105"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavThree.currentTime = 0;
+  wavThree.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 4: CLICK FUNCTION
+const playPadFour = function() {
+  const wavFour = document.querySelector('audio[data-key="100"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavFour.currentTime = 0;
+  wavFour.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 5: CLICK FUNCTION
+const playPadFive = function() {
+  const wavFive = document.querySelector('audio[data-key="101"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavFive.currentTime = 0;
+  wavFive.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 6: CLICK FUNCTION
+const playPadSix = function() {
+  const wavSix = document.querySelector('audio[data-key="102"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavSix.currentTime = 0;
+  wavSix.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 7: CLICK FUNCTION
+const playPadSeven = function() {
+  const wavSeven = document.querySelector('audio[data-key="97"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavSeven.currentTime = 0;
+  wavSeven.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 8: CLICK FUNCTION
+const playPadEight = function() {
+  const wavEight = document.querySelector('audio[data-key="98"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavEight.currentTime = 0;
+  wavEight.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+// PAD 9: CLICK FUNCTION
+const playPadNine = function() {
+  const wavNine = document.querySelector('audio[data-key="99"]');
+  const greenLight = document.getElementById('green-light');
+
+  greenLight.classList.add('green');
+  wavNine.currentTime = 0;
+  wavNine.play();
+
+  setTimeout(function() {
+    greenLight.classList.remove('green');
+  }, 100);
+};
+
+
+
+
 
 
 
