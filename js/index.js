@@ -15,6 +15,8 @@ window.addEventListener('keyup', function(event) {
   key.classList.add('z-depth-1');
 });
 
+// main
+
 
 /* The Above Function Explained:
 First, we access the full user's *window* and add an eventListener to watch for 'keydown'
